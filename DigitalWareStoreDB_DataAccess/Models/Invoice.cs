@@ -11,14 +11,14 @@ namespace DigitalWareStoreDB_DataAccess.Models
         {
             InvoiceItems = new HashSet<InvoiceItem>();
         }
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingDefault)]
+
+        [Key]
         public int IdInvoice { get; set; }
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingDefault)]
         public int IdClient { get; set; }
-        [Required]
         public DateTime Date { get; set; }
-       
-        public virtual Client IdClientNavigation { get; set; } = null!;
+
+        [JsonIgnore]
+        public virtual Client? IdClientNavigation { get; set; }
         public virtual ICollection<InvoiceItem> InvoiceItems { get; set; }
     }
 }

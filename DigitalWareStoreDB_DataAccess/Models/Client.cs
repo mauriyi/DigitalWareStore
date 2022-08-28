@@ -12,22 +12,17 @@ namespace DigitalWareStoreDB_DataAccess.Models
             Invoices = new HashSet<Invoice>();
         }
 
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingDefault)]
+        [Key]
         public int IdClient { get; set; }
-        [Required]
         public string FirstName { get; set; } = null!;
         public string? MiddleName { get; set; }
-        [Required]
         public string LastName { get; set; } = null!;
-        [Required]
         public DateTime DateOfBirth { get; set; }
-        [Required]
         public string Address { get; set; } = null!;
-        [Required]
         public string Phone { get; set; } = null!;
-        [Required]
         public string Email { get; set; } = null!;
 
+        [JsonIgnore]
         public virtual ICollection<Invoice> Invoices { get; set; }
     }
 }

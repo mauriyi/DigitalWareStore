@@ -23,6 +23,11 @@ namespace DigitalWareStoreDB_DataAccess.Models
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+            if (!optionsBuilder.IsConfigured)
+            {
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
+                optionsBuilder.UseSqlServer("Data Source=DESKTOP-H91POP2;Initial Catalog=DigitalWareStore;User ID=sa;Password=root");
+            }
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -130,7 +135,10 @@ namespace DigitalWareStoreDB_DataAccess.Models
 
                 entity.Property(e => e.IdProduct).HasColumnName("id_product");
 
-                entity.Property(e => e.Nombre).HasColumnName("nombre");
+                entity.Property(e => e.Nombre)
+                    .HasMaxLength(256)
+                    .IsUnicode(false)
+                    .HasColumnName("nombre");
 
                 entity.Property(e => e.Price)
                     .HasColumnType("decimal(18, 0)")

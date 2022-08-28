@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32819.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitalWareStoreDB_DataAccess", "DigitalWareStoreDB_DataAccess\DigitalWareStoreDB_DataAccess.csproj", "{7E194370-DF2E-467B-A9F4-171CBC9C9195}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DigitalWareStoreDB_DataAccess", "DigitalWareStoreDB_DataAccess\DigitalWareStoreDB_DataAccess.csproj", "{7E194370-DF2E-467B-A9F4-171CBC9C9195}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitalWareStoreAPI", "DigitalWareStoreAPI\DigitalWareStoreAPI.csproj", "{D1B729BC-0A12-467C-AF70-E6338918E7B9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{7E194370-DF2E-467B-A9F4-171CBC9C9195}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E194370-DF2E-467B-A9F4-171CBC9C9195}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7E194370-DF2E-467B-A9F4-171CBC9C9195}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1B729BC-0A12-467C-AF70-E6338918E7B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1B729BC-0A12-467C-AF70-E6338918E7B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1B729BC-0A12-467C-AF70-E6338918E7B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1B729BC-0A12-467C-AF70-E6338918E7B9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

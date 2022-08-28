@@ -12,15 +12,13 @@ namespace DigitalWareStoreDB_DataAccess.Models
             InvoiceItems = new HashSet<InvoiceItem>();
         }
 
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingDefault)]
+        [Key]
         public int IdProduct { get; set; }
-        [Required]
-        public int Nombre { get; set; }
-        [Required]
+        public string Nombre { get; set; } = null!;
         public decimal Price { get; set; }
-        [Required]
         public int Stock { get; set; }
 
+        [JsonIgnore]
         public virtual ICollection<InvoiceItem> InvoiceItems { get; set; }
     }
 }
